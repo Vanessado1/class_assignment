@@ -12,3 +12,15 @@ let products =[
 
 // Task 2 
 
+function applyDiscount(products,discountRate) {
+    return products.map(product => ({
+        ...product,
+        price: product.price - (product.price * discountRate)
+    }
+        
+    ))
+}
+
+console.log(applyDiscount(products, 0.1));
+
+//
