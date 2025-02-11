@@ -12,15 +12,25 @@ let products =[
 
 // Task 2 
 
-function applyDiscount(products,discountRate) {
-    return products.map(product => ({
-        ...product,
-        price: product.price - (product.price * discountRate)
-    }
+// function applyDiscount(products,discountRate) {
+//     return products.map(product => ({
+//         ...product,
+//         price: product.price - (product.price * discountRate)
+//     }
         
-    ))
+//     ))
+// }
+
+// console.log(applyDiscount(products, 0.1));
+
+// Task 3 
+
+let sales = [250,400,150,900,1200];
+
+function calculateTotalRevenue(sales) {
+    return sales.reduce((total, sale) =>total+sale,0)
 }
 
-console.log(applyDiscount(products, 0.1));
+console.log(`Total Rev: $${calculateTotalRevenue(sales)}`);
 
-//
+//Task 4
